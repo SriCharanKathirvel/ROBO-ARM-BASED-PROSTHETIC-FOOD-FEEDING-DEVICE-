@@ -1,0 +1,114 @@
+
+#include <Servo.h>
+int a,b;
+int servoPin1 = 11;
+int servoPin2 = 10;
+int servoPin3 = 9;
+int servoPin4 = 6;
+int servoPin5 = 5;
+
+Servo servo1, servo2, servo3, servo4, servo5;
+
+int angle, m3, m2, m1, m4, m5, d=50 ;
+
+void setup()
+{
+  pinMode(13, INPUT_PULLUP);
+  servo1.attach(servoPin1);
+  servo2.attach(servoPin2);
+  servo3.attach(servoPin3);
+  servo4.attach(servoPin4);
+  servo5.attach(servoPin5);
+
+}
+
+void loop ()
+{
+
+    servo1.write(100);
+    delay(d);
+    servo2.write(70);
+    delay(d);
+    servo3.write(35);
+    delay(d);
+    servo4.write(50);
+    delay(d);
+    servo5.write(0);
+    delay(d);
+    for(m4=50;m4<=140;m4++)
+{
+  servo4.write(m4);
+    delay(d); 
+}
+ 
+ for (m1 = 100,m2=70; m1 >= 30,m2<=120; m1--,m2++)
+{ 
+    servo1.write(m1);
+    delay(d);
+    servo2.write(m2);
+    delay(d);
+    a=m1; 
+    for(m3=35;m3>=0;m3--)
+    {
+  servo3.write(m3=0);
+    delay(d); 
+    }
+}
+
+for(m5=0;m5<=180;m5++)
+{
+  servo5.write(m5);
+    delay(d); 
+}
+for(m4=140;m4>=120;m4--)
+{
+  servo4.write(m4);
+  delay(d);
+  b=m4;
+}
+for(m1=a;m1<=100;m1++)
+{
+  servo1.write(m1);
+  delay(d);
+}
+
+for(m3=0;m3<=10;m3++)
+{
+  servo3.write(m3);
+  delay(d);
+}
+for(m3=10;m3<=20;m3++)
+{
+  servo3.write(m3);
+  delay(d);
+}
+for(m2=120;m2>=110;m2--)
+{
+  servo2.write(m2);
+  delay(d);
+}
+for(m4=b;m4>=115;m4--)
+{
+  servo4.write(m4);
+  delay(d);
+}
+
+/*for(m4=140,m1=30,m1=65,m2=120,m3=0,m3=10;m4>=110,m1<=65,m1<=100,m2>=80,m3<=10,m3<=20;m4--,m1++,m1++,m2--,m3++,m3++)
+{
+   servo4.write(m4);
+    delay(d);
+  servo1.write(m1);
+    delay(d);
+    servo1.write(m1);
+    delay(d);
+    servo2.write(m2);
+    delay(d);
+  servo3.write(m3);
+    delay(d); 
+   servo3.write(m3);
+   delay(d);
+    
+}*/
+delay(10000);
+}
+ 
