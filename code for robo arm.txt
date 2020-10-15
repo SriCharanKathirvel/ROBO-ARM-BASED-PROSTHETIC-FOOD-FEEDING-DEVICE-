@@ -93,22 +93,6 @@ for(m4=b;m4>=115;m4--)
   delay(d);
 }
 
-/*for(m4=140,m1=30,m1=65,m2=120,m3=0,m3=10;m4>=110,m1<=65,m1<=100,m2>=80,m3<=10,m3<=20;m4--,m1++,m1++,m2--,m3++,m3++)
-{
-   servo4.write(m4);
-    delay(d);
-  servo1.write(m1);
-    delay(d);
-    servo1.write(m1);
-    delay(d);
-    servo2.write(m2);
-    delay(d);
-  servo3.write(m3);
-    delay(d); 
-   servo3.write(m3);
-   delay(d);
-    
-}*/
 delay(10000);
 }
  
